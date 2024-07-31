@@ -1,0 +1,849 @@
+@charset "UTF-8";
+
+/**
+    Author: Rifat Bhiuya
+    Author email: hello.rifatbhuiya@gmail.com
+    Version: 0.0.0.1
+*/
+
+/**
+----------------
+Table Of Content
+----------------
+0. Common CSS Start
+1. Header CSS Start
+2. Home Slider CSS Start
+3. Home Action CSS Start
+4. Home Welcome CSS Start
+5. Home Services CSS Start
+6. Highlight Box CSS Start
+7. Gallery CSS Start
+8. BTT CSS Start
+9. Footer CSS Start
+10. About CSS Start
+11. New Build CSS Start
+12. Construction CSS Start
+13. Contact CSS Start
+*/
+
+:root { 
+    /* Colors */
+    --primary_color: #1d324a;
+    --primary_thin: #c6ccd2;
+    --secondary_color: #a1c34b;
+    --secondary_thin: #cfe1bb;
+    --white_color: #ffffff; 
+    --black_color: #000000;
+    --light_gray: #e8eaed;
+
+    /* Round */
+    --round_sm: 3px;
+    --round_md: 5px;
+    --round_lg: 25px;
+    --round_full: 50%;
+
+    /* Typography */
+    --h1: 32px;
+    --h2: 29px;
+    --h3: 26px;
+    --h4: 23px;
+    --h5: 20px;
+    --h6: 18px;
+    --lg: 18px;
+    --bs: 16px;
+    --sm: 14px;
+
+    /* Duration */
+    --transition: all ease-in-out .5s;
+
+    /* Font Family */
+    --sans_serif: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+span,
+address,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+body {
+    font-size: var(--bs);
+    scroll-behavior: smooth;
+    font-family: var(--sans_serif);
+    font-weight: 400;
+    color: var(--primary_color);
+}
+
+.page-hero {
+    height: 520px;
+}
+/* Common CSS End */
+
+.main-header {
+    padding: 8px 0;
+    background-color: var(--primary_color);
+    color: var(--primary_thin);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: .5px .5px 5px 0 rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header.shrink-header {
+    padding: 6px 0;
+}
+
+.main-header .desktop p {
+    line-height: 1.1;
+    font-size: var(--lg);
+    font-weight: 300;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header.shrink-header .desktop p {
+    font-size: var(--bs);
+}
+
+.main-header .desktop .query .d-block {
+    font-size: var(--lg);
+}
+
+.main-header.shrink-header .desktop .query .d-block {
+    font-size: var(--bs);
+}
+
+.main-header .desktop .query a {
+    font-size: var(--sm);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--primary_thin);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .desktop .query a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.main-header .desktop .navigation-keys {
+    margin-top: 28px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header.shrink-header .desktop .navigation-keys {
+    margin-top: 20px;
+}
+
+.main-header .desktop .navigation-keys a {
+    color: var(--secondary_color);
+    font-weight: 300;
+    font-size: var(--lg);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.main-header.shrink-header .desktop .navigation-keys a {
+    font-size: var(--bs);
+}
+
+.main-header .desktop .navigation-keys a:hover,
+.main-header .desktop .navigation-keys a.active {
+    color: var(--primary_thin);
+}
+
+.main-header .desktop .navigation-keys a i {
+    font-size: var(--sm);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+}
+
+.desktop .navigation-keys .dropdown-li {
+    position: relative;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.desktop .navigation-keys .dropdown-ul {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 200px;
+    display: none;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header.shrink-header .desktop .navigation-keys .dropdown-ul {
+    top: 24px;
+}
+
+.desktop .navigation-keys .dropdown-li:hover .dropdown-ul {
+    display: block;
+}
+
+.desktop .navigation-keys .dropdown-li:hover a.gap-1 {
+    color: var(--primary_thin);
+} 
+
+.desktop .navigation-keys .dropdown-li:hover a i {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+} 
+
+.desktop .navigation-keys .dropdown-ul ul {
+    padding: 4px 0;
+    background-color: rgba(161, 195, 75, 0.9);
+}
+
+.desktop .navigation-keys .dropdown-ul ul a {
+    padding: 4px 8px;
+    color: var(--primary_color);
+    font-weight: 400;
+    width: 100%;
+    text-transform: capitalize;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.desktop .navigation-keys .dropdown-ul ul a:hover,
+.desktop .navigation-keys .dropdown-ul ul a.active {
+    background-color: var(--white_color);
+    color: var(--primary_color);
+}
+
+.main-header .desktop .logo {
+    width: 120px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header.shrink-header .desktop .logo {
+    width: 100px;
+}
+
+.main-header .solid-bar {
+    color: var(--primary_thin);
+    border: 1px solid var(--primary_thin);
+}
+
+.main-header .solid-bar i {
+    font-size: 22px;
+    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+}
+
+.main-header .responsive p {
+    font-size: var(--sm);
+}
+
+.main-header .responsive .query a {
+    font-size: var(--sm);
+    color: var(--primary_thin);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .responsive .query a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.main-header .responsive-logo {
+    width: 92px;
+}
+
+.main-header .responsive .offcanvas {
+    background-color: var(--white_color);
+}
+
+.main-header .responsive .offcanvas ul li {
+    margin: 2px 0;
+}
+
+.main-header .responsive .offcanvas ul a {
+    width: 100%;
+    padding: 6px 8px;
+    color: var(--primary_color);
+    background-color: rgba(198, 204, 210, 0.2);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .responsive .dropdown-ul a {
+    text-transform: capitalize;
+    padding-left: 24px !important;
+    color: var(--primary_color) !important;
+    background-color: rgba(198, 204, 210, 0.350) !important;
+}
+
+.main-header .responsive .offcanvas ul a:hover,
+.main-header .responsive .offcanvas ul a.active,
+.main-header .responsive .offcanvas ul .dropdown-li.active .d-flex.active,
+.main-header .responsive .offcanvas .dropdown-ul a.active {
+    color: var(--primary_thin) !important;
+    background-color: var(--primary_color) !important;
+}
+
+.main-header .responsive .dropdown-li i {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .responsive .dropdown-li i.toggled {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.main-header .offcanvas-footer {
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+}
+
+.main-header .offcanvas-footer ol a {
+    font-weight: 500;
+    font-size: var(--bs);
+    color: var(--primary_color) !important;
+}
+/* Header CSS End */
+
+.home-slider .slider-bg {
+    position: relative;
+    height: 600px;
+}
+
+.home-slider .bottom-overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0 40px;
+    color: var(--primary_thin);
+    background-color: rgba(0, 0, 0, 0.650);
+}
+
+.home-slider .bottom-overlay h2 {
+    font-weight: 300;
+}
+
+.home-slider .bottom-overlay p {
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+.home-slider .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+} 
+
+.home-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.home-slider .slick-dots li button {
+    color: transparent;
+    background-color: rgba(198, 204, 210, 0.5);
+    border: none;
+    height: 6px;
+    width: 28px;
+}
+
+.home-slider .slick-dots li.slick-active button {
+    background-color: var(--primary_thin);
+}
+/* Home Slider CSS End */
+
+.home-action {
+    margin: 24px 0;
+    padding: 28px 0;
+    background-color: var(--light_gray);
+}
+
+.home-action p {
+    font-weight: 300;
+    font-size: var(--h3);
+}
+
+.home-action p a {
+    color: var(--primary_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.home-action p a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+/* Home Action CSS End */
+
+.home-welcome {
+    padding: 20px 0;
+}
+
+.home-welcome h1,
+.home-welcome p {
+    font-weight: 300;
+}
+/* Home Welcome CSS End */
+
+.home-services {
+    margin: 40px 0 60px;
+}
+
+.home-services h2 {
+    font-weight: 300;
+    font-size: var(--h3);
+    text-transform: uppercase;
+}
+
+.home-services a {
+    color: var(--primary_color);
+    font-size: var(--lg);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.home-services a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+/* Home Services CSS End */
+
+.highlight-box {
+    padding: 40px 0;
+    background-color: var(--secondary_thin);
+}
+/* Highlight Box CSS End */
+
+.gallery {
+    padding: 64px 0;
+}
+/* Gallery CSS End */
+
+.btt {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 50;
+}
+
+.btt i {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    cursor: pointer;
+    border-radius: var(--round_full);
+    -webkit-border-radius: var(--round_full);
+    -moz-border-radius: var(--round_full);
+    -ms-border-radius: var(--round_full);
+    -o-border-radius: var(--round_full);
+}
+/* BTT CSS End */
+
+.main-footer {
+    padding: 20px 0;
+    color: var(--primary_thin);
+    background-color: var(--primary_color);
+}
+
+.main-footer a {
+    color: var(--primary_thin);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.main-footer ol li {
+    margin-top: 12px;
+}
+
+.main-footer ol li:last-child {
+    margin-top: 0px;
+}
+
+.main-footer ol li a {
+    line-height: 1.1;
+}
+
+.main-footer ol li a.phone {
+    font-weight: 600;
+}
+
+.main-footer ol li a.email {
+    font-size: var(--sm);
+}
+
+.main-footer address {
+    text-transform: uppercase;
+}
+
+.main-footer p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.main-footer .btm-links a {
+    font-size: var(--lg);
+}
+/* Footer CSS End */
+
+.about-content h1,
+.about-content h2,
+.about-services h2 {
+    font-weight: 300;
+}
+
+.about-content p.small {
+    font-size: var(--sm);
+}
+
+.about-quality .primary-bg {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.about-quality .quality-content h3 {
+    font-weight: 500;
+}
+
+.about-quality .quality-content p.small {
+    font-size: var(--sm);
+    padding-left: 8px;
+}
+
+.about-quality .quality-content p.bold {
+    font-weight: 700;
+}
+
+.about-quality .quality-content a {
+    color: var(--white_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.about-quality .quality-content a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.about-quality h2.medium {
+    font-weight: 500;
+}
+/* About CSS End */
+
+.new-build {
+    border-bottom: 16px solid var(--primary_color);
+}
+
+.build-content h1,
+.building-guide h2,
+.build-content h2 {
+    font-weight: 300;
+}
+
+.build-content p.small {
+    font-size: var(--sm);
+}
+
+.building-guide {
+    border-top: 8px solid var(--white_color);
+    padding: 40px 0;
+    color: var(--primary_thin);
+    background-color: var(--primary_color);
+}
+
+.building-guide p.large {
+    font-size: var(--lg);
+}
+
+.professional h2.medium {
+    font-weight: 500;
+}
+/* New Build CSS End */
+
+.general-construction h1 {
+    font-weight: 300;
+}
+
+.general-construction p.small {
+    font-size: var(--sm);
+}
+
+.construction-list .list-item {
+    margin-bottom: 20px;
+}
+
+.construction-list .list-item:nth-child(odd) {
+    background-color: #d2d4da;
+}
+
+.construction-list .list-item:nth-child(even) {
+    background-color: #edf2da;
+}
+
+.construction-list .list-item li span {
+    font-weight: 500;
+}
+
+.construction-list .list-item p.large {
+    font-size: var(--lg);
+}
+
+.construction-list .list-item .primary-btn {
+    color: var(--primary_thin);
+    background-color: var(--primary_color);
+    padding: 6px 16px;
+    font-weight: 500;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.construction-list .list-item .secondary-btn {
+    color: var(--primary_color);
+    background-color: var(--secondary_color);
+    padding: 6px 16px;
+    font-weight: 500;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.construction-list .list-item .primary-btn:hover,
+.construction-list .list-item .secondary-btn:hover {
+    opacity: .8;
+}
+/* Construction CSS End */
+
+.contact {
+    padding: 40px 0;
+}
+
+.contact h1 {
+    font-weight: 300;
+}
+
+.contact a {
+    font-weight: 500;
+    color: var(--primary_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.contact a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.contact .ec-logo {
+    width: 160px;
+}
+
+.contact h2 {
+    font-weight: 300;
+}
+
+.contact .form-control {
+    border: var(--bs-border-width) solid var(--secondary_color);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.contact .form-control::placeholder {
+    color: var(--primary_color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contact .form-select {
+    --bs-form-select-bg-img: url("../images/select-arrow.png");
+    background-size: 22px 18px;
+    border: var(--bs-border-width) solid var(--secondary_color);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    text-transform: uppercase;
+    color: var(--primary_color);
+    font-weight: 500;
+}
+
+.contact .form-select option {
+    color: var(--primary_color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contact .primary-btn {
+    padding: 6px 40px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--white_color);
+    background-color: var(--primary_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.contact .primary-btn:hover {
+    opacity: .8;
+}
+/* Contact CSS End */
