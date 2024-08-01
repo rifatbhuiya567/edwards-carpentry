@@ -19,11 +19,12 @@ Table Of Content
 6. Highlight Box CSS Start
 7. Gallery CSS Start
 8. BTT CSS Start
-9. Footer CSS Start
-10. About CSS Start
-11. New Build CSS Start
-12. Construction CSS Start
-13. Contact CSS Start
+9. Easy Action CSS Start
+10. Footer CSS Start
+11. About CSS Start
+12. New Build CSS Start
+13. Construction CSS Start
+14. Contact CSS Start
 */
 
 :root { 
@@ -133,7 +134,7 @@ body {
 }
 
 .page-hero {
-    height: 520px;
+    height: 720px;
 }
 /* Common CSS End */
 
@@ -431,7 +432,7 @@ body {
 
 .home-slider .slider-bg {
     position: relative;
-    height: 600px;
+    height: 820px;
 }
 
 .home-slider .bottom-overlay {
@@ -548,6 +549,31 @@ body {
 .gallery {
     padding: 64px 0;
 }
+
+.gallery .gallery-content a {
+    overflow: hidden;
+}
+
+.gallery .gallery-content img {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.gallery .gallery-content a:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
 /* Gallery CSS End */
 
 .btt {
@@ -573,10 +599,68 @@ body {
 }
 /* BTT CSS End */
 
+.easy-action {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: 50;
+}
+
+.easy-action ul li a {
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    color: var(--white_color);
+    text-align: center;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.easy-action ul li a i {
+    font-size: 16px;
+}
+
+.easy-action ul li a.phone {
+    background-color: #14ac00;
+}
+
+.easy-action ul li a.phone:hover {
+    background-color: #0c6900;
+}
+
+.easy-action ul li a.email {
+    background-color: #e04006;
+}
+
+.easy-action ul li a.email:hover {
+    background-color: #691c00;
+}
+
+.easy-action ul li a.facebook {
+    background-color: #106afe;
+}
+
+.easy-action ul li a.facebook:hover {
+    background-color: #00358b;
+}
+/* Easy Action CSS End */
+
 .main-footer {
     padding: 20px 0;
     color: var(--primary_thin);
     background-color: var(--primary_color);
+}
+
+.main-footer .logo img {
+    width: 120px;
 }
 
 .main-footer a {
@@ -763,6 +847,10 @@ body {
     opacity: .8;
 }
 /* Construction CSS End */
+
+.contact-page .page-hero {
+    height: 520px;
+}
 
 .contact {
     padding: 40px 0;

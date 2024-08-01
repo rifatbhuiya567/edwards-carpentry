@@ -6,6 +6,7 @@
     */
     $(window).load(function(){
         $(".btt i").hide();
+        $(".easy-action ul").hide();
     });
 
     /**
@@ -25,6 +26,13 @@
         }
         else{
             $(".btt i").fadeOut(500);
+        }
+    
+        if( scrolling > 150){
+            $(".easy-action ul").fadeIn(500);
+        }
+        else{
+            $(".easy-action ul").fadeOut(500);
         }
     });
       
